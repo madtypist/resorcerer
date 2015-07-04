@@ -2,8 +2,11 @@
   <div class="row">
     <h3>Users</h3>
     <div class="column">
-      <table class="table">
+      <table class="table table-bordered">
         <tbody>
+          <tr>
+              <th>User</th>
+          </tr>
           <% @users.each do |user| %>
             <tr>
               <%= render user %>
