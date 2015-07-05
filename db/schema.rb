@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 20150705162644) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "people_and_skills", id: false, force: :cascade do |t|
+  create_table "people_skills", id: false, force: :cascade do |t|
     t.integer "person_id"
     t.integer "skill_id"
   end
 
-  add_index "people_and_skills", ["person_id"], name: "index_people_and_skills_on_person_id"
-  add_index "people_and_skills", ["skill_id"], name: "index_people_and_skills_on_skill_id"
+  add_index "people_skills", ["person_id"], name: "index_people_skills_on_person_id"
+  add_index "people_skills", ["skill_id"], name: "index_people_skills_on_skill_id"
 
   create_table "skills", force: :cascade do |t|
     t.string   "name"
