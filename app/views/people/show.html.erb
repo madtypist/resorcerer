@@ -10,5 +10,12 @@
   <%= @person.role %>
 </p>
 
+<p>
+  <strong>Skills:</strong>
+  <% @person.skills.each do |skill| %>
+    <%= skill.name %><br />
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
